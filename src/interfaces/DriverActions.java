@@ -41,8 +41,8 @@ public interface DriverActions {
 	
 	public void setMultibleText(String urlPath, String[] selectorArray, String[] textArray, String actionInfo);
 	
-	public <WebElement> WebElement getElement(String selector, String actionInfo);
+	public Object getElement(String selector, String actionInfo);
 	// need to chekc last 2 methods
-	// public List<WebElement> getElements(String selector, String actionInfo);
+	public List<Object> getElements(String selector, String actionInfo);
 		
 }
