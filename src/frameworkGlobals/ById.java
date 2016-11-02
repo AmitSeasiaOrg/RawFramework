@@ -119,5 +119,17 @@ public class ById implements DriverActions {
 		return null;
 	}
 
+	@Override
+	public Object getElement(String selector, String actionInfo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Object> getElements(String selector, String actionInfo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 		
 	}
