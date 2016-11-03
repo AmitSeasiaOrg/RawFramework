@@ -36,8 +36,8 @@ public  void test1()
 		driver.get("http://toolsqa.com/automation-practice-form/");
 		WebElement nameTb = driver.findElement(By.name("firstname"));
 		JSExecutor obj =  new JSExecutor();
-		jsobj= obj.obj();
-		obj.
+		 JSExecutor jsobj= obj.obj();
+		jsobj.h
 		//highlightElement(nameTb);
 		nameTb.sendKeys("test");
 		
