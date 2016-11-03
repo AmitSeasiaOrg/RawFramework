@@ -48,7 +48,7 @@ public class BrowserSelection {
 			break;
 			
 		case "GC":
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Data/chromedriver_win32/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Data/BrowserExecutables/chromedriver_win32.exe");
 			System.out.println("Google chrome selected");
 			driver = new ChromeDriver();
 			
@@ -63,7 +63,7 @@ public class BrowserSelection {
 			break;
 			
 		case "IE":
-			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/Data/MicrosoftDrivers/IEDriverServer_Win32_2.53.1/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/Data/BrowserExecutables/IEDriverServer_Win32_2.53.1.exe");
 			System.out.println("Internet explorer selected");
 			DesiredCapabilities dc = DesiredCapabilities.internetExplorer();
 			dc.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
