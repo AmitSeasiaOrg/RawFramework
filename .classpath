@@ -28,6 +28,5 @@
 	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/selenium-java-2.53.0-srcs.jar"/>
 	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/selenium-server-standalone-2.42.2.jar"/>
 	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/testng-6.9.9.jar"/>
-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/apache-logging-log4j.jar/apache-logging-log4j.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
