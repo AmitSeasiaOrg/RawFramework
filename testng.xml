@@ -3,7 +3,8 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="frameworkGlobals.TestClass"/>
+      <class name="test.TestClassNew"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

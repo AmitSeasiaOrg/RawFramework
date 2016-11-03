@@ -6,16 +6,19 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import frameworkGlobals.BrowserSelection;
 
 
-public class TakeScreenshots {
 
-	
+public class TakeScreenshots extends BrowserSelection {
+
+
 		public static void GenerateScreenshot(String SSname) throws IOException, InterruptedException
 	{	
 		
@@ -25,7 +28,7 @@ public class TakeScreenshots {
 			{
 				Thread.sleep(4000);
 				File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-				FileUtils.copyFile(scrFile, new File("SystemLogs\\Screenshot\\"+SSname+".jpeg"));
+				FileUtils.copyFile(scrFile, new File("SystemLogs\\Screenshots\\"+SSname+".jpeg"));
 				System.out.println("Screenshot has been generated for server error and location is  " +SSname);
 				
 			}
@@ -35,14 +38,11 @@ public class TakeScreenshots {
 			Thread.sleep(4000);
 			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			// Now you can do whatever you need to do with it, for example copy somewhere
-			FileUtils.copyFile(scrFile, new File("SystemLogs\\Screenshot\\"+SSname+".jpeg"));
+			FileUtils.copyFile(scrFile, new File("SystemLogs\\Screenshots\\"+SSname+".jpeg"));
 			System.out.println("Screenshot has been generated for " +SSname);
 			
 		}
-		/*else
-		{
-		System.out.println("Everything is working fine");
-		}*/
+		
 		}
 		catch(Exception e)
 		{
@@ -52,6 +52,7 @@ public class TakeScreenshots {
 		
 	}
 	
+		
 		
 		
 		public static void checkerroralertcomesandaccept(String SSname) throws IOException, InterruptedException, HeadlessException, AWTException
@@ -65,6 +66,7 @@ public class TakeScreenshots {
 			}*/
 		}
 	
+		
 		
 		
 		public static boolean isTextPresent(String text)
@@ -85,17 +87,21 @@ public class TakeScreenshots {
 	
 		
 		
-		public static void ForcefulGenerateScreenshot(String SSname) throws IOException, InterruptedException
+		
+public static void ForcefulGenerateScreenshot(String SSname) throws IOException, InterruptedException
 		{	
 			// It will check whether server error is coming in a page
-			
+	driver = new FirefoxDriver();
+	driver.manage().window().maximize();
 				Thread.sleep(4000);
 				File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 				// Now you can do whatever you need to do with it, for example copy somewhere
-				FileUtils.copyFile(scrFile, new File("Results\\"+ReadDataFromPropertiesFile.readProperty_CommonData("newfoldercreated")+"\\Screenshot\\"+SSname+".jpeg"));
+				FileUtils.copyFile(scrFile, new File("SystemLogs\\Screenshots\\"+SSname+".jpeg"));
 				System.out.println("Screenshot has been generated for " +SSname);
 			    System.out.println("Screenshot taken");
 			
 		}
 	
+		
+		
 }
