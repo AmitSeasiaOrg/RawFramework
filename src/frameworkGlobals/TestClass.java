@@ -15,7 +15,7 @@ public class TestClass {
 	
 	public static void main(String[] args) throws InterruptedException
 	{
-		fillForm();
+	//	fillForm();
 	}
 
 	
@@ -31,7 +31,7 @@ public  void test1()
 }
 
 	//@Test
-	public void fillForm() throws InterruptedException
+/*	public void fillForm() throws InterruptedException
 	{
 		driver.get("http://toolsqa.com/automation-practice-form/");
 		WebElement nameTb = driver.findElement(By.name("firstname"));
@@ -52,6 +52,6 @@ public  void test1()
 		WebElement toolRadio = driver.findElement(By.id("tool-0"));
 		highlightElement(toolRadio);
 		toolRadio.sendKeys("10/11/12");
-	}
+	}*/
 
 }

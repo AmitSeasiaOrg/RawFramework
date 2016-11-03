@@ -2,11 +2,10 @@ package utilities;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import frameworkGlobals.BrowserSelection;
 
-public class JSExecutor {
+public class JSExecutor extends BrowserSelection{
 	// assuming JS is enabled
 	private JavascriptExecutor js = (JavascriptExecutor) driver;
 	private WebElement lastElem = null;
