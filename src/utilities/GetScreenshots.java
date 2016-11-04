@@ -16,7 +16,7 @@ import frameworkGlobals.BrowserSelection;
 
 
 
-public class TakeScreenshots extends BrowserSelection {
+public class GetScreenshots extends BrowserSelection {
 
 
 		public static void GenerateScreenshot(String SSname) throws IOException, InterruptedException
