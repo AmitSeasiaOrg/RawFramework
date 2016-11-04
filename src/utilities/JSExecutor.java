@@ -6,7 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class JSExecutor {
+import frameworkGlobals.BrowserSelection;
+
+public class JSExecutor extends BrowserSelection{
 	// assuming JS is enabled
 	private JavascriptExecutor js = (JavascriptExecutor) driver;
 	private WebElement lastElem = null;
