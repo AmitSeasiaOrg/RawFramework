@@ -3,6 +3,8 @@ package frameworkGlobals;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
@@ -13,15 +15,14 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class BrowserSelection {
-	protected static WebDriver driver;
-	protected static Capabilities caps;
-	public static Logger log1 = Logger.getLogger("rootLogger");
-	
-	/*public static void main(String[] args) throws IOException
-	{
-		initDriver();
-	}*/
+import interfaces.ClassObject;
+
+
+public class BrowserSelection implements ClassObject{
+	public   static WebDriver driver;
+	public  static Capabilities caps;
+	public  static Logger log1 = Logger.getLogger("rootLogger");
+
 
 	public static WebDriver initDriver() throws IOException {
 		System.out.println("Selecting browser");
@@ -35,6 +36,7 @@ public class BrowserSelection {
 		case "MF":
 			System.out.println("Mozilla firefox selected");
 			driver = new FirefoxDriver();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
 			caps = ((RemoteWebDriver) driver).getCapabilities();
 			String browserNameAndVersionMF = caps.getBrowserName() + " " + caps.getVersion() + " running on " + caps.getPlatform();
@@ -103,4 +105,6 @@ public class BrowserSelection {
 		}
 		return driver;
 	}
+	
+	
 }
