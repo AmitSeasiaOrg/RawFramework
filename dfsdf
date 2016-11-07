@@ -1,0 +1,66 @@
+[1mdiff --cc src/frameworkGlobals/BrowserSelection.java[m
+[1mindex cf98806,4eb3178..0000000[m
+[1m--- a/src/frameworkGlobals/BrowserSelection.java[m
+[1m+++ b/src/frameworkGlobals/BrowserSelection.java[m
+[1mdiff --git a/.classpath b/.classpath[m
+[1mindex 68bf301..def546a 100644[m
+[1m--- a/.classpath[m
+[1m+++ b/.classpath[m
+[36m@@ -3,56 +3,85 @@[m
+ 	<classpathentry kind="src" path="src"/>[m
+ 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>[m
+ 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/apache-logging-log4j.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/apache-mime4j-0.6.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/bsh-2.0b4.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/cglib-nodep-2.1_3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/commons-codec-1.10.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/commons-exec-1.3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/commons-io-2.4.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/commons-logging-1.2.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/gson-2.3.1.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/guava-19.0.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/hamcrest-core-1.3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/hamcrest-library-1.3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/httpclient-4.5.1.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/httpcore-4.4.3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/httpmime-4.5.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/jcommander-1.48.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/jna-4.1.0.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/jna-platform-4.1.0.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/junit-4.12.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/netty-3.5.7.Final.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/phantomjsdriver-1.2.1.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/selenium-java-2.53.0.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/selenium-java-2.53.0-srcs.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/selenium-server-standalone-2.42.2.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Amit/Projects/Automation_Project_WorkSpace/RawFrameworkV2.0/ExternalJars/Selenium_Java_2.53/testng-6.9.9.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/MainStreetAutomation/JarFiles/Selenium_Java_2.53/apache-logging-log4j.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/apache-logging-log4j.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/apache-mime4j-0.6.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/bsh-2.0b4.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/cglib-nodep-2.1_3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/commons-codec-1.10.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/commons-exec-1.3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/commons-io-2.4.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/commons-logging-1.2.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/gson-2.3.1.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/guava-19.0.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/hamcrest-core-1.3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/hamcrest-library-1.3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/httpclient-4.5.1.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/httpcore-4.4.3.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/httpmime-4.5.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/jcommander-1.48.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/jna-4.1.0.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/jna-platform-4.1.0.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/junit-4.12.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/netty-3.5.7.Final.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/phantomjsdriver-1.2.1.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/selenium-java-2.53.0.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/selenium-java-2.53.0-srcs.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/selenium-server-standalone-2.42.2.jar"/>[m
+[31m-	<classpathentry kind="lib" path="D:/Workspace/RawFramework/ExternalJars/Selenium_Java_2.53/testng-6.9.9.jar"/>[m
+[32m+[m	[32m<classpathentry kind="lib" path="ExternalJars/apache-logging-log4j.jar/apache-logging-log4j.jar"/>[m
+[32m+[m	[32m<classpathentry kind="lib" path="ExternalJars/ExcelReader/Xls_Reader.jar"/>[m
+[32m+[m	[32m<classpathe

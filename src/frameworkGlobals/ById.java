@@ -1,19 +1,49 @@
 package frameworkGlobals;
 
-import java.util.List;
+import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 
 import interfaces.DriverActions;
+import utilities.Alerts;
+import utilities.JSExecutor;
+import utilities.Utility;
 
-public class ByID extends BrowserSelection implements DriverActions{
-
+public class ById extends BrowserSelection implements DriverActions{
+	
+	 /**
+	   * This method performs click on the @param selector element.
+	   * ID of elements should be pass as argument @param selector.
+	   * Information of action should be pass as argument @param actionInfo
+	   * @param selector ID of element to Click.
+	   * @param actionInfo This parameter is information of action will show in Console/ScreenShot name/Logs
+	   * @throws RuntimeException if any exception is occur
+	   */
 	@Override
 	public void click(String selector, String actionInfo) {
 		// TODO Auto-generated method stub
-		driver.findElement(By.id(selector)).click();
-		System.out.println(actionInfo);
+		try {
+			if (Alerts.isAlertPresent()) {
+				Alerts.acceptAlert();
+			}			
+			//ALert Check Metod need to implement here
+			WebElement element = driver.findElement(By.id(selector));
+			new JSExecutor().highlightElement(element);
+			element.click();
+			System.out.println("Clicked Successfully: "+actionInfo+" (ID: "+selector+")");
+		
+			//log1.info("Click Successfully: "+actionInfo+" (ID: "+selector+")");
+		} catch (Exception e) {
+			System.out.println("Not able to Click: "+actionInfo+" (ID: "+selector+")");
+			//log1.info("Not able to Click: "+actionInfo+" (ID: "+selector+")");
+			
+			Utility.takeScreenshot(actionInfo.replaceAll(" ", "_"));
+			throw new java.lang.RuntimeException("Test Case failed as Not able to Click: " + actionInfo);
+		}
+		
 	}
 
 	@Override
@@ -129,9 +159,5 @@ public class ByID extends BrowserSelection implements DriverActions{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	
-
-	
 
 }
