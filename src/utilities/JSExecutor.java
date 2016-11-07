@@ -25,7 +25,7 @@ public class JSExecutor extends BrowserSelection{
 		lastBorder = (String) (js.executeScript("arguments[0].setAttribute('style', arguments[1]);", elem, setBorder));
 	}
 
-	public void unhighlightLast() {
+	private void unhighlightLast() {
 		if (lastElem != null) {
 			try {
 				// if there already is a highlighted element, Un-highlight it
